@@ -130,6 +130,20 @@
 
                 </div>
             </div>
+            <div class="soft-skills">
+                <h3>Soft skills</h3>
+            <ul>
+                <li>Listening</li>
+                <li>Desire to learn</li>
+                <li>Design aptitude</li>
+                <li>Thinking outside the box</li>
+                <li>Creativity</li>
+                <li>Logical thinking</li>
+                <li>Problem solving</li>
+                <li>Giving clear feedback</li>
+                <li>Dispute resolution</li>
+              </ul>
+            </div>
         </div>
 
     </section>
@@ -778,6 +792,29 @@
                 class="color-footer">S</span>UTCU</h5>
         <div class="copyright">Copyright &copy; 2024. All rights reserved.</div>
     </footer>
-
+    <script>
+        function checkWindowSize() {
+        const invertedPanels = document.querySelectorAll('.timeline-panel-container-inverted');
+        const normalPanels = document.querySelectorAll('.timeline-panel-container');
+  
+        if (window.innerWidth <= 768) {
+          invertedPanels.forEach(panel => {
+            panel.classList.remove('timeline-panel-container-inverted');
+            panel.classList.add('timeline-panel-container');
+          });
+        } else {
+          normalPanels.forEach(panel => {
+            panel.classList.remove('timeline-panel-container');
+            panel.classList.add('timeline-panel-container-inverted');
+          });
+        }
+      }
+  
+      // Check window size on load
+      checkWindowSize();
+  
+      // Add event listener for window resize
+      window.addEventListener('resize', checkWindowSize);
+        </script>
 </body>
 </html>

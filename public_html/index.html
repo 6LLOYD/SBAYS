@@ -127,6 +127,20 @@
                     </div>
                 </div>
             </div>
+            <div class="soft-skills">
+                <h3>Soft skills</h3>
+                <ul>
+                    <li>Écouter</li>
+                    <li>Désir d'apprendre</li>
+                    <li>Aptitude au design</li>
+                    <li>Penser hors des sentiers battus</li>
+                    <li>Créativité</li>
+                    <li>Raisonnement logique</li>
+                    <li>Résolution de problèmes</li>
+                    <li>Donner des retours clairs</li>
+                    <li>Résolution de conflits</li>
+                  </ul>
+              </div>
         </div>
     </section>
 
@@ -136,12 +150,12 @@
             <div class="heading">
                 <h2>Expériences</h2>
             </div>
-            <ul class="timeline">
-                <li>
+            <ul class="timeline" >
+                <li >
                     <div class="timeline-badge"><span class="bi-filetype-html"></span><span
                             class="bi-filetype-css"></span><span class="bi-filetype-js"></span>
                     </div>
-                    <div class="timeline-panel-container-inverted">
+                    <div class="timeline-panel-container-inverted" >
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <span class="bi bi-house"> Entrepreneuriat</span>
@@ -775,7 +789,30 @@
                 class="color-footer">S</span>UTCU</h5>
         <div class="copyright">Copyright &copy; 2024. Tous droits réservés.</div>
     </footer>
+    <script>
+      function checkWindowSize() {
+      const invertedPanels = document.querySelectorAll('.timeline-panel-container-inverted');
+      const normalPanels = document.querySelectorAll('.timeline-panel-container');
 
+      if (window.innerWidth <= 768) {
+        invertedPanels.forEach(panel => {
+          panel.classList.remove('timeline-panel-container-inverted');
+          panel.classList.add('timeline-panel-container');
+        });
+      } else {
+        normalPanels.forEach(panel => {
+          panel.classList.remove('timeline-panel-container');
+          panel.classList.add('timeline-panel-container-inverted');
+        });
+      }
+    }
+
+    // Check window size on load
+    checkWindowSize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkWindowSize);
+      </script>
 </body>
 
 </html>
